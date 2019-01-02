@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000">
+
+    <win.smartown.android.library.certificateCamera.CameraPreview
+        android:id="@+id/camera_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/camera_option"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/preview_mock"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/camera_flash"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/camera_flash_off"/>
+
+
+            <ImageView
+                android:id="@+id/camera_close"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/back_btn_land"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/preview_mock"/>
+
+            <LinearLayout
+                android:id="@+id/camera_crop_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/preview_mock"/>
+
+                <ImageView
+                    android:id="@+id/camera_crop"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="fitXY"/>
+                <com.edmodo.cropper.CropImageView
+                    android:padding="10px"
+                    android:visibility="gone"
+                    android:id="@+id/CropImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    />
+                <TextView
+
+                    android:id="@+id/view_camera_crop_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/preview_mock"
+                    android:gravity="center"
+                    android:text="@string/touch_to_focus"
+                    android:textColor="#afff"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:background="@color/preview_mock">
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/camera_option"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/camera_flash"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:src="@mipmap/camera_flash_off" />-->
+
+            <ImageView
+                android:id="@+id/camera_take"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center"
+                android:layout_margin="32dp"
+                android:src="@mipmap/tack_pic_btn"/>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/camera_close"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:src="@mipmap/camera_close" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--拍照后操作布局-->
+            <LinearLayout
+                android:id="@+id/ll_camera_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_camera_result_ok"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/camera_result_ok" />
+
+                <ImageView
+                    android:id="@+id/iv_camera_result_cancel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@mipmap/camera_close" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>
