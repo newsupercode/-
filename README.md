@@ -9,3 +9,6 @@ https://github.com/edmodo/cropper
 
 https://github.com/smartown/CertificateCamera
 
+启动界面：
+
+![图片说明1](https://github.com/newsupercode/BookAidl/blob/master/imgs/%E6%9C%8D%E5%8A%A1%E7%AB%AF.jpg)
