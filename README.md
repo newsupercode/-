@@ -9,7 +9,15 @@ https://github.com/edmodo/cropper
 
 https://github.com/smartown/CertificateCamera
 
-这个增加了调大调小焦距的功能  还有裁剪 压缩的功能 还解决了有的手机读取图片会旋转的问题 
+
+
+这个增加了
+调大调小焦距的功能  
+裁剪 
+压缩的功能 
+还解决了有的手机读取图片会旋转的问题 
+
+
 
 启动界面：
 
